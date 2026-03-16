@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Calculateur d'IMC</h1>
+    Poids (): <input type="number" name="poids" id="poids"><br><br>
+    Taille (m): <input type="number" name="taille" id="taille"><br><br>
+    <button onclick="calculerIMC()">Calculer</button><br>
+    <p id="res"></p>
+
+    <script>
+        poids = document.getElementById("poids").value
+        taille = document.getElementById("taille").value
+        imc = poids / (taille^2);
+        let res;
+        //utilisant switch
+        switch (imc) {
+            case imc < 18.5:
+                res = "Insuffisance pondérale (maigreur)"
+                break;
+            case imc >= 18.5 && imc < 25:
+                res = "Corpulence normale"
+                break;
+            case imc >= 25 && imc < 30:
+                res = "Surpoids"
+                break;
+            case imc >= 30 && imc < 35:
+                res = "Obésité modérée"
+                break;
+            case imc >= 35 && imc < 40:
+                res = "Obésité sévère"
+                break;
+            case imc >= 40:
+                res = "Obésité morbide ou massive"
+                break;
+            default:
+                break;
+            
+        }
+    </script>
+</body>
+</html>

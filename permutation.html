@@ -1,1 +1,24 @@
-utati
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <input type="text" name="txt1" id="txt1"><br><br>
+    <input type="text" name="txt2" id="txt2"><br><br>
+    <button onclick="Permuter()">Permuter</button>
+
+    <script>
+        function Permuter(){
+            text1 = document.getElementById("txt1")
+            text2 = document.getElementById("txt2")
+            val1 = text1.value
+            val2 = text2.value
+            text1.value = val2
+            text2.value = val1
+        }
+    </script>
+</body>
+</html>
